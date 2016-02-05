@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href = "C:\Users\Anthony\Git\bootstrap-3.3.6-dist\bootstrap-3.3.6-dist\css\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href = "C:\Users\Anthony\Git\guessing_game\ggame.css">
+<title>Full Stack guessing game</title>
+</head>
+
+<body>
+	<div class = "container">
+		<div class = "row">
+			<div class="col-md-12" >
+				<img class = "center-block" src="fa-logo@2x.png" alt="full stack academy" style: "width:623px; height:200px">
+			</div>
+		</div>
+		
+		<div class = "row row_margin">
+			<div class="col-md-12  jumbotron">
+				<h1 class = "text-center" id = "guess" >Guess The Number</h1>
+			</div>
+		</div>
+
+		<div class ='row row_margin'>
+			
+			<div class="col-md-12">
+				<input type="text" id='playerGuess' placeholder="Input Number 1-100" class = 'form-control input text-center' onkeydown="if (event.keyCode === 13) doesNumberToGuessExist()"</input>
+			</div>
+		</div>
+
+		<div class ='row row_margin'>
+			<div class= "col-md-12 text-center">	
+  				<p id = "status" class = "alert alert-success"><strong> Success!</strong> This alert box could indicate a successful or positive action. </p>
+  	
+  			</div>
+		</div>
+		
+		<div class ='row row_margin'>			
+			<div class= "col-md-12 text-center">	
+				<button type='button' id='playersGuess' onclick='doesNumberToGuessExist()' class="btn btn-lg btn-info">Submit Your Guess</button>
+			</div>
+       	</div>
+       	
+
+
+    	<div class='row'>
+    		<div class="col-md-6 text-right">
+           		<button type='button'id='playersGuess' onclick='playAgain()' class="btn btn-lg btn-default">Play Again</button>
+           	</div>
+           	<div class="col-md-6 text-left">
+           		<button type='button' id='playerRequestsHint' onclick='hint()' class= 'btn btn-lg btn-default'>Give me a Hint</button>
+       		</div>
+
+       	<div class='row'>
+       		</div class = "col-md-12">
+	       		<h3 id='guess-count' class = "text-center"> 5 Guesses Remaining </h3>
+	       	</div>
+    	</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="C:\Users\Anthony\Git\bootstrap-3.3.6-dist\bootstrap-3.3.6-dist\js\jquery-2.2.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="C:\Users\Anthony\Git\bootstrap-3.3.6-dist\bootstrap-3.3.6-dist\js\bootstrap.min.js"></script>
+		<script src='ggame.js'></script>
+
+
+</body>
+</html>
