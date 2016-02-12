@@ -9,54 +9,69 @@
 </head>
 
 <body>
+
 	<div class = "container">
-		<div class = "row">
+		
+		<div class = "row row_margin">
 			<div class="col-md-12" >
 				<img class = "center-block" src="fa-logo@2x.png" alt="full stack academy" style: "width:623px; height:200px">
 			</div>
 		</div>
 		
+	</div>	
+
+	<div class = "container transbox contentContainer">
+		
 		<div class = "row row_margin">
-			<div class="col-md-12  jumbotron">
-				<h1 class = "text-center" id = "guess" >Guess The Number</h1>
-			</div>
-		</div>
-
-		<div class ='row row_margin'>
-			
 			<div class="col-md-12">
-				<input type="text" id='playerGuess' placeholder="Input Number 1-100" class = 'form-control input text-center' onkeydown="if (event.keyCode === 13) doesNumberToGuessExist()"</input>
-			</div>
+	
+				<h1 class = "text-center textContainer" id = "guess" >Guess The Number</h1>
+				</div>
+	
 		</div>
 
 		<div class ='row row_margin'>
-			<div class= "col-md-12 text-center">	
-  				<p id = "status" class = "alert alert-success"><strong> Success!</strong> This alert box could indicate a successful or positive action. </p>
-  	
-  			</div>
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+				<input type="text" id='playerGuess' placeholder="Input Number 1-100" container='body' data-content="<strong>No Guess Entered.</strong> <br>Enter your guess here." data-trigger='manual' data-html='true' data-placement="top" class='form-control input text-center'</input>
+			</div>
+			<div class="col-md-4">
+			</div>
 		</div>
+
 		
 		<div class ='row row_margin'>			
 			<div class= "col-md-12 text-center">	
-				<button type='button' id='playersGuess' onclick='doesNumberToGuessExist()' class="btn btn-lg btn-info">Submit Your Guess</button>
+				<button type='button' id='submitGuess' class="btn btn-lg btn-primary">Submit Your Guess</button>
 			</div>
        	</div>
-       	
 
 
-    	<div class='row'>
+    	<div class='row row_margin'>
     		<div class="col-md-6 text-right">
-           		<button type='button'id='playersGuess' onclick='playAgain()' class="btn btn-lg btn-default">Play Again</button>
+           		<button type='button'id='playerPlaysAgain' class="btn btn-md btn-danger width_150">Play Again</button>
            	</div>
            	<div class="col-md-6 text-left">
-           		<button type='button' id='playerRequestsHint' onclick='hint()' class= 'btn btn-lg btn-default'>Give me a Hint</button>
+           		<button type='button' id='playerRequestsHint' class="btn btn-md btn-danger width_150">Give me a Hint</button>
        		</div>
+       	</div>
 
        	<div class='row'>
-       		</div class = "col-md-12">
-	       		<h3 id='guess-count' class = "text-center"> 5 Guesses Remaining </h3>
+       		<div class="col-md-6 col-md-offset-3 textContainer">
+	       		<h3 id='guess-count' class = " text-center"> 5 Guesses Remaining </h3>
 	       	</div>
     	</div>
+
+    	<div class ='row row_margin invisible'>
+			<div class= "col-md-12 text-center">	
+  				<p id = "status" class = "alert alert-info"><strong> Success!</strong> This alert box could indicate a successful or positive action. </p>
+  	
+  			</div>
+		</div>
+	
+
+	</div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
